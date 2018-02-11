@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trigger</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/demo.css">
+    <script src="../../lib/layui/layui.all.js"></script>
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="height: 100%; margin: 0;">
+    <ul class="layui-tab-title site-demo-title">
+        <li class="layui-this">预览</li>
+        <li>查看代码</li>
+    </ul>
+    <div class="layui-tab-content site-demo-body">
+
+
+        <!--预览-->
+        <div class="layui-tab-item  layui-show">
+            <fieldset class="layui-elem-field site-demo-button">
+                <legend>trigger | placement | content</legend>
+                <div style="padding: 15px 15px 20px;">
+                    <button class="layui-btn layui-btn-primary">点击按钮</button>
+                    <button class="layui-btn layui-btn-normal">点击按钮</button>
+                    <button class="layui-btn layui-btn-warm">hover按钮</button>
+                    <button class="layui-btn layui-btn-danger">hover按钮</button>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>trigger描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>'click'</b></p>
+                <p>用于处理触发方式</p>
+                <p>目前触发方式有：<b>'click'</b>,<b>'hover'</b></p>
+            </div>
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>placement描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>'bottom'</b></p>
+                <p>用于处理触发后泡泡显示的方位</p>
+                <p>目前触发方式有：<b>'top'</b>,<b>'bottom'</b>,<b>'left'</b>,<b>'right'</b></p>
+            </div>
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>content描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>'泡泡内容'</b></p>
+                <p>需要弹出的内容,可以直接传入文字或者html片段</p>
+            </div>
+
+        </div>
+
+        <!--代码-->
+
+        <div class="layui-tab-item layui-tab-code">
+<textarea class="layui-border-box site-demo-text site-demo-code" id="LAY_democode" spellcheck="false" readonly="">
+$(".layui-btn-primary").easyPopover({
+    placement:'top',
+    content:'&lt;span&gt;向上内容&lt;/span&gt;'
+});
+
+$(".layui-btn-normal").easyPopover({
+    placement:'bottom',
+    content:'&lt;span&gt;向下内容&lt;/span&gt;'
+});
+
+$(".layui-btn-warm").easyPopover({
+    trigger:'hover',
+    placement:'left',
+    content:'&lt;b&gt;向左内容&lt;/b&gt;'
+});
+
+$(".layui-btn-danger").easyPopover({
+    trigger:'hover',
+    placement:'right',
+    content:'向右内容'
+});
+</textarea>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/popover/easyPopover.js"></script>
+<script>
+    $(".layui-btn-primary").easyPopover({
+        placement:'top',
+        content:'<span>向上内容</span>'
+    });
+    $(".layui-btn-normal").easyPopover({
+        placement:'bottom',
+        content:'<span>向下内容</span>'
+    });
+    $(".layui-btn-warm").easyPopover({
+        trigger:'hover',
+        placement:'left',
+        content:'<b>向左内容</b>'
+    });
+    $(".layui-btn-danger").easyPopover({
+        trigger:'hover',
+        placement:'right',
+        content:'向右内容'
+    });
+</script>
+</body>
+</html>

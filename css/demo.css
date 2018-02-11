@@ -1,0 +1,14 @@
+html,body{height: 100%;}
+.site-demo-title {
+    position: fixed;
+    left: 0px;
+    right: 0;
+    top: 0px;
+}
+.site-demo-body{padding-top: 60px; margin-bottom: -60px; height: 100%; box-sizing: border-box;}
+.layui-tab-code{height: 100%;box-sizing: border-box; color: #881280;}
+.layui-tab-code textarea{padding: 0 20px; width: 100%; height: 100%;resize: none;border: none; font-size: 12px; color: #881280; font-family: Courier New; box-sizing: border-box;}
+
+.layui-elem-quote-demo p{margin-bottom: 10px;}
+.layui-elem-quote-demo p:last-child{margin-bottom: 0}
+.a-link{color: #1E9FFF;}
