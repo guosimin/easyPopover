@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trigger</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/demo.css">
+    <script src="../../lib/layui/layui.all.js"></script>
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="height: 100%; margin: 0;">
+    <ul class="layui-tab-title site-demo-title">
+        <li class="layui-this">预览</li>
+        <li>查看代码</li>
+    </ul>
+    <div class="layui-tab-content site-demo-body">
+
+
+        <!--预览-->
+        <div class="layui-tab-item  layui-show">
+            <fieldset class="layui-elem-field site-demo-button">
+                <legend>reference | popoverStyle</legend>
+                <div style="padding: 15px 15px 20px;">
+                    <button class="layui-btn layui-btn-primary button1">
+                        这是一个超长的点击按钮
+                        <span class="layui-badge-dot layui-bg-orange"></span>
+                    </button>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>reference描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>' '</b></p>
+                <p>以触发元素中某元素为基准展示</p>
+                <p>可以传入的参数如：<b>' .class '</b>,<b>' #id '</b></p>
+            </div>
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>popoverStyle描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>{ }</b></p>
+                <p>泡泡的附加样式</p>
+                <p>可以传入的参数如：<b>{"margin-top":'20px'}</b></p>
+            </div>
+        </div>
+
+        <!--代码-->
+
+        <div class="layui-tab-item layui-tab-code">
+<textarea class="layui-border-box site-demo-text site-demo-code" id="LAY_democode" spellcheck="false" readonly="">
+html   -----------------------------------------------------------------------------------------------------
+&lt;button class=&quot;layui-btn layui-btn-primary button1&quot;&gt;
+    这是一个超长的点击按钮
+    &lt;span class=&quot;layui-badge-dot layui-bg-orange&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+javascript  -----------------------------------------------------------------------------------------------
+
+$(".button1").popover({
+    trigger:'click',
+    placement:'bottom',
+    reference:'.bb',
+    popoverStyle:{"margin-top":'20px'},
+    content:'&lt;span style="border: 1px solid #ccc;"&gt;这是内容&lt;/span&gt;'
+});
+</textarea>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/popover/easyPopover.js"></script>
+<script>
+    $(".button1").easyPopover({
+        trigger:'click',
+        placement:'bottom',
+        reference:'.layui-badge-dot',
+        popoverStyle:{"margin-top":'20px'},
+        content:'<span style="border: 1px solid #ccc;">这是内容</span>'
+    });
+</script>
+</body>
+</html>
