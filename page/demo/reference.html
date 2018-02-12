@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../../lib/layui/css/layui.css">
     <link rel="stylesheet" href="../../css/demo.css">
     <script src="../../lib/layui/layui.all.js"></script>
+    <style>
+        .font-b{font-weight: bold}
+        .font-15{font-size: 15px;}
+    </style>
 </head>
 <body>
 <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="height: 100%; margin: 0;">
@@ -22,7 +26,7 @@
                 <legend>reference | popoverStyle</legend>
                 <div style="padding: 15px 15px 20px;">
                     <button class="layui-btn layui-btn-primary button1">
-                        这是一个超长的点击按钮
+                        这是一个超长的点击按钮,弹出层以圆点为基准弹出
                         <span class="layui-badge-dot layui-bg-orange"></span>
                     </button>
                 </div>
@@ -44,15 +48,30 @@
                 <p>泡泡的附加样式</p>
                 <p>可以传入的参数如：<b>{"margin-top":'20px'}</b></p>
             </div>
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>popoverClass描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>''</b></p>
+                <p>泡泡的附加class</p>
+                <p>可以传入的参数如：<b>'font-b font-15'</b></p>
+            </div>
         </div>
 
         <!--代码-->
 
         <div class="layui-tab-item layui-tab-code">
 <textarea class="layui-border-box site-demo-text site-demo-code" id="LAY_democode" spellcheck="false" readonly="">
+style   -----------------------------------------------------------------------------------------------------
+
+.font-b{font-weight: bold}
+.font-15{font-size: 15px;}
+
 html   -----------------------------------------------------------------------------------------------------
+
 &lt;button class=&quot;layui-btn layui-btn-primary button1&quot;&gt;
-    这是一个超长的点击按钮
+    这是一个超长的点击按钮,弹出层以圆点为基准弹出
     &lt;span class=&quot;layui-badge-dot layui-bg-orange&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;
 
@@ -61,7 +80,8 @@ javascript  --------------------------------------------------------------------
 $(".button1").popover({
     trigger:'click',
     placement:'bottom',
-    reference:'.bb',
+    popoverClass:'font-b font-15',
+    reference:'.layui-badge-dot',
     popoverStyle:{"margin-top":'20px'},
     content:'&lt;span style="border: 1px solid #ccc;"&gt;这是内容&lt;/span&gt;'
 });
@@ -75,6 +95,7 @@ $(".button1").popover({
     $(".button1").easyPopover({
         trigger:'click',
         placement:'bottom',
+        popoverClass:'font-b font-15',
         reference:'.layui-badge-dot',
         popoverStyle:{"margin-top":'20px'},
         content:'<span style="border: 1px solid #ccc;">这是内容</span>'
