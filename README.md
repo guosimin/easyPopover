@@ -1,3 +1,71 @@
 # easyPopover
 Popover(弹出框)
 demo: https://guosimin.github.io/easyPopover/index.html
+
+### 参数
+<table>
+    <colgroup>
+        <col width="200">
+        <col width="200">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>属性</th>
+        <th>值</th>
+        <th>描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>trigger</td>
+        <td>'click'</td>
+        <td>触发方法</td>
+    </tr>
+    <tr>
+        <td>placement</td>
+        <td>'bottom'</td>
+        <td>弹出位置</td>
+    </tr>
+    <tr>
+        <td>popoverClass</td>
+        <td>''</td>
+        <td>泡泡class</td>
+    </tr>
+    <tr>
+        <td>popoverStyle</td>
+        <td>{}</td>
+        <td>泡泡style</td>
+    </tr>
+    <tr>
+        <td>content</td>
+        <td>'泡泡内容'</td>
+        <td>泡泡内容</td>
+    </tr>
+    <tr>
+        <td>hasArrow</td>
+        <td>false</td>
+        <td>是否有箭头</td>
+    </tr>
+    <tr>
+        <td>arrowStyle</td>
+        <td>{}</td>
+        <td>箭头样式</td>
+    </tr>
+    <tr>
+        <td>reference</td>
+        <td>''</td>
+        <td>泡泡的展示基准</td>
+    </tr>
+    <tr>
+        <td>deviation</td>
+        <td>''</td>
+        <td>泡泡偏移值</td>
+    </tr>
+    <tr>
+        <td>autoWidth</td>
+        <td>'true'</td>
+        <td>宽度自定义</td>
+    </tr>
+    </tbody>
+</table>
