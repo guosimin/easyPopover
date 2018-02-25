@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trigger</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/demo.css">
+    <script src="../../lib/layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../../js/popover/easypopover.css">
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="height: 100%; margin: 0;">
+    <ul class="layui-tab-title site-demo-title">
+        <li class="layui-this">预览</li>
+        <li>查看代码</li>
+    </ul>
+    <div class="layui-tab-content site-demo-body">
+
+
+        <!--预览-->
+        <div class="layui-tab-item  layui-show">
+            <fieldset class="layui-elem-field site-demo-button">
+                <legend>hasArrow</legend>
+                <div style="padding: 15px 15px 20px;">
+                    <button class="layui-btn layui-btn-primary btn1">
+                        这个是正确的示范
+                    </button>
+                    <button class="layui-btn layui-btn-primary btn2">
+                        这个是错误的示范，箭头定位可能出现不准确
+                    </button>
+                </div>
+            </fieldset>
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                <legend>autoWidth描述</legend>
+            </fieldset>
+            <div class="layui-elem-quote layui-elem-quote-demo">
+                <p><b>默认值</b> ： <b>true</b></p>
+                <p>弹出层是否设定了固定宽度,如果不是没有设定,则需要通过重复计算位置已达到箭头出现在准确位置，为省性能,默认传入内容为固定宽度。</p>
+                <p>可以传入的参数如：<b>true</b>,<b>false</b></p>
+            </div>
+        </div>
+
+        <!--代码-->
+
+        <div class="layui-tab-item layui-tab-code">
+<textarea class="layui-border-box site-demo-text site-demo-code" id="LAY_democode" spellcheck="false" readonly="">
+html   -----------------------------------------------------------------------------------------------------
+
+<button class="layui-btn layui-btn-primary btn1">
+    这个是正确的示范
+</button>
+<button class="layui-btn layui-btn-primary btn2">
+    这个是错误的示范，箭头定位可能出现不准确
+</button>
+
+javascript  -----------------------------------------------------------------------------------------------
+
+$(".btn1").easyPopover({
+    trigger:'click',
+    placement:'right',
+    content:'<span style="border: 1px solid #ccc; font-size: 30px;">这是一段超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长内容</span>',
+    hasArrow:true,
+    autoWidth:false,
+});
+
+$(".btn2").easyPopover({
+    trigger:'click',
+    placement:'right',
+    content:'<span style="border: 1px solid #ccc; font-size: 30px;">这是一段超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长内容</span>',
+    hasArrow:true,
+});
+</textarea>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/popover/easyPopover.js"></script>
+<script>
+    $(".btn1").easyPopover({
+        trigger:'click',
+        placement:'right',
+        content:'<span style="border: 1px solid #ccc; font-size: 30px;">这是一段超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长内容</span>',
+        hasArrow:true,
+        autoWidth:false,
+    });
+
+    $(".btn2").easyPopover({
+        trigger:'click',
+        placement:'right',
+        content:'<span style="border: 1px solid #ccc; font-size: 30px;">这是一段超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长内容</span>',
+        hasArrow:true,
+    });
+</script>
+</body>
+</html>

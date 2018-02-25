@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>EasyPopover</title>
     <link rel="stylesheet" href="./lib/layui/css/layui.css">
     <script src="./js/jquery.js"></script>
     <style>
@@ -32,13 +32,13 @@
                     <a href="javascript:;">组件事例<span class="layui-nav-more"></span></a>
                     <dl class="layui-nav-child">
                         <dd><a title="trigger | placement | content" href="#trigger" page="./page/demo/trigger.html">trigger | placement | content</a></dd>
-                        <dd><a title="reference | popoverStyle |popoverClass" href="#reference" page="./page/demo/reference.html">reference | popoverStyle | popoverClass</a></dd>
-                        <dd><a title="hasArrow" href="javascript:;" page="">hasArrow</a></dd>
-                        <dd><a title="autoWidth" href="javascript:;" page="">autoWidth</a></dd>
-                        <dd><a title="deviation" href="javascript:;" page="">deviation</a></dd>
+                        <dd><a title="reference | popoverStyle | popoverClass" href="#reference" page="./page/demo/reference.html">reference | popoverStyle | popoverClass</a></dd>
+                        <dd><a title="hasArrow" href="#hasArrow" page="./page/demo/hasArrow.html">hasArrow</a></dd>
+                        <dd><a title="autoWidth" href="#autoWidth" page="./page/demo/autoWidth.html">autoWidth</a></dd>
+                        <dd><a title="deviation" href="#deviation" page="./page/demo/deviation.html">deviation</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">关于</a></li>
+                <li class="layui-nav-item"><a title="关于" href="#about" page="./page/demo/about.html">关于</a></li>
             </ul>
         </div>
     </div>
@@ -70,7 +70,6 @@
 
         //一些事件监听
         element.on('nav(test)', function(data){
-            console.log($(data).html());
             $("#iframe").attr("src",$(data).find("a").attr("page"));
         });
     });
